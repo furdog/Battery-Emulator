@@ -29,6 +29,9 @@ void init_hal() {
 #elif defined(HW_DFROBOT_EDGE101)
 #include "hw_dfrobot_edge101.h"
   esp32hal = new DFRobotEdge101Hal();
+#elif defined(HW_BATTBOXH1)
+#include "hw_battboxh1.h"
+  esp32hal = new BattBOXHal();
 #else
 #error "No HW defined."
 #endif
