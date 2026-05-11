@@ -26,6 +26,9 @@ void init_hal() {
 #elif defined(HW_DEVKIT)
 #include "hw_devkit.h"
   esp32hal = new DevKitHal();
+#elif defined(HW_BATTBOXH1)
+#include "hw_battboxh1.h"
+  esp32hal = new BattBOXHal();
 #else
 #error "No HW defined."
 #endif

@@ -134,7 +134,7 @@ static void write_tall_text(int x, int y, const char* str, bool invert) {
 }
 
 static void clear() {
-  uint8_t blank[128] = {
+  uint8_t blank[132] = {
       0,
   };
   for (int i = 0; i < 8; i++) {
