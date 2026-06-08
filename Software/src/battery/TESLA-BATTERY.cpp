@@ -468,7 +468,8 @@ void TeslaBattery::
       (static_cast<double>(datalayer.battery.status.real_soc) / 10000) * datalayer.battery.info.total_capacity_Wh);
 
   // Define the allowed discharge power
-  datalayer.battery.status.max_discharge_power_W = (battery_max_discharge_current * (battery_volts / 10));
+  //datalayer.battery.status.max_discharge_power_W = (battery_max_discharge_current * (battery_volts / 10));
+  datalayer.battery.status.max_discharge_power_W = 20000;
   // Cap the allowed discharge power if higher than the maximum discharge power allowed
   if (datalayer.battery.status.max_discharge_power_W > datalayer.battery.status.override_discharge_power_W) {
     datalayer.battery.status.max_discharge_power_W = datalayer.battery.status.override_discharge_power_W;
