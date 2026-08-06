@@ -201,11 +201,9 @@ class Esp32Hal {
   // additional hardwired indicator LEDs with RGB LEDs on the same chain report more than 1 here.
   virtual uint8_t LED_COUNT() { return 1; }
 
-#ifndef SMALL_FLASH_DEVICE
   // i2c display
   virtual gpio_num_t DISPLAY_SDA_PIN() { return GPIO_NUM_NC; }
   virtual gpio_num_t DISPLAY_SCL_PIN() { return GPIO_NUM_NC; }
-#endif  // SMALL_FLASH_DEVICE
 
   // Equipment stop pin
   virtual gpio_num_t EQUIPMENT_STOP_PIN() { return GPIO_NUM_NC; }
