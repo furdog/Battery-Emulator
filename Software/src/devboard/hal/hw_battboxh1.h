@@ -22,7 +22,7 @@ class BattBOXHal : public Esp32Hal {
   // CS input of MCP2515
   virtual gpio_num_t MCP2515_CS() { return GPIO_NUM_17; }
   // INT output of MCP2515
-  //virtual gpio_num_t MCP2515_INT() { return GPIO_NUM_35; }
+  virtual gpio_num_t MCP2515_INT() { return GPIO_NUM_35; }
 
   // LED
   virtual gpio_num_t LED_PIN() { return GPIO_NUM_2; }
