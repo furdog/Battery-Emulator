@@ -36,6 +36,8 @@ class BattBOXHal : public Esp32Hal {
   virtual gpio_num_t POSITIVE_CONTACTOR_PIN() { return GPIO_NUM_25; } //kn2
   virtual gpio_num_t NEGATIVE_CONTACTOR_PIN() { return GPIO_NUM_27; }
   virtual gpio_num_t PRECHARGE_PIN() { return GPIO_NUM_26; } //kn1
+  virtual gpio_num_t SECOND_BATTERY_CONTACTORS_PIN() { return GPIO_NUM_32; }
+  virtual gpio_num_t TRIPLE_BATTERY_CONTACTORS_PIN() { return GPIO_NUM_33; }
 
   std::vector<comm_interface> available_interfaces() {
     return {comm_interface::CanNative, comm_interface::CanAddonMcp2515};
@@ -51,6 +53,8 @@ class BattBOXHal : public Esp32Hal {
         return "CAN (MCP2515 add-on)";
       case comm_interface::CanFdAddonMcp2518:
         return "CAN FD (MCP2518 add-on)";
+      case comm_interface::CanFdAddonMcp2518_2:
+	return "";
       case comm_interface::Modbus:
         return "Modbus";
       case comm_interface::RS485:
