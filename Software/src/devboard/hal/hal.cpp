@@ -32,6 +32,9 @@ void init_hal() {
 #elif defined(HW_BATTBOXH1)
 #include "hw_battboxh1.h"
   esp32hal = new BattBOXHal();
+#elif defined(HW_CHADEMOBOX)
+#include "hw_chademobox.h"
+  esp32hal = new ChademoBOXHal();
 #else
 #error "No HW defined."
 #endif
